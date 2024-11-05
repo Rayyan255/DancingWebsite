@@ -1,0 +1,43 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block content
+  nav#navbar
+    ul
+      div#logo
+        img(src="/static/img/logo.png", alt="")
+        | RDA
+
+      li: a(href="/") Home
+      li: a(href="/about") About
+      li: a(href="/contact") Contact Us
+      li: a(href="/services") Services
+
+  section#introSection
+    div Welcome To Ray's Dance Academy
+    div.small Eat Sleep Dance Repeat
+
+  section#missionSection
+    h2 -: Our Mission :-
+    div.card
+      h3 Dance Perfection
+      p Achieve your best with our "Dance Perfection" program, where expert instructors help you refine your technique and artistry. Whether you’re a beginner or advanced, we’ll guide you on your journey to dance excellence.
+
+    div.card
+      h3 Dance the way you like
+      p Embrace your individuality in our "Dance the Way You Like" program! Explore various styles and find your unique expression through dance, all while enjoying a supportive and creative environment.
+
+    div.card
+      h3 Expert Teaching
+      p Benefit from our "Expert Teaching" program, featuring experienced instructors dedicated to nurturing your talent. With personalized guidance and feedback, you’ll gain the skills and confidence to shine on stage!
+
+  section#sponsersSection
+  h2 -: Our Sponsors :-
+  div#sponsors
+    img(src="/static/img/hplogo.png", alt="HP Logo", class="spImage")
+    img(src="/static/img/microsoftlogo.png", alt="Microsoft Logo", class="spImage")
+    img(src="/static/img/applelogo.png", alt="Apple Logo", class="spImage")
+    img(src="/static/img/skypelogo.png", alt="Skype Logo", class="spImage")
+

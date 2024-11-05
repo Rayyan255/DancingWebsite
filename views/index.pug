@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    // The link tag for CSS should be self-closing without any nesting
+    link(rel="stylesheet", href="../static/style.css")
+  body
+    nav#navbar
+      ul
+        div#logo
+               img(src="/static/img/logo.png", alt="")
+               | RDA
+
+        li #[a(href= "/") Home]
+        li #[a(href= "/") About]
+        li #[a(href= "/") Contact us]
+        li #[a(href= "/") Services]
+
+    section#introSection 
+      div "Welcome To Ray's Dance Academy"
+      div.small Eat Sleep Dance Repeat
+
+
+    section#missionSection 
+      h2 -: Our Mission :-
+      div.card
+         h3 Dance Perfection
+         p Achieve your best with our "Dance Perfection" program, where expert instructors help you refine your technique and artistry. Whether you’re a beginner or advanced, we’ll guide you on your journey to dance excellence.
+         
+      div.card
+         h3 Dance the way you like
+         p  Embrace your individuality in our "Dance the Way You Like" program! Explore various styles and find your unique expression through dance, all while enjoying a supportive and creative environment.
+         
+
+         
+      div.card
+         h3 Expert Teaching
+         p Benefit from our "Expert Teaching" program, featuring experienced instructors dedicated to nurturing your talent. With personalized guidance and feedback, you’ll gain the skills and confidence to shine on stage!
+
+    section#sponsersSection 
+      h2 -: Our Sponsors :-
+      div#sponsors
+          img(src="/static/img/hplogo.png", alt="sponsorsimage", class="spImage")
+          img(src="/static/img/microsoftlogo.png", alt="sponsorsimage", class="spImage")
+          img(src="/static/img/applelogo.png", alt="sponsorsimage", class="spImage")
+          img(src="/static/img/skypelogo.png", alt="sponsorsimage", class="spImage")
+
+
+    
+
+    script(src="/static/index.js")
+
+    section#contactSection
+  h2.contact-title Contact Us
+  form.contact-form(action="/send-message", method="POST")
+    .form-group
+      label(for="name") Name:
+      input#name(type="text", name="name", class="form-input", placeholder="Your Name", required)
+
+    .form-group
+      label(for="email") Email:
+      input#email(type="email", name="email", class="form-input", placeholder="Your Email", required)
+   
+    .form-group
+      label(for="name") Address:
+      input#Address(type="text", name="Address", class="form-input", placeholder="Your Address", required)
+
+    .form-group
+      label(for="message") Message:
+      textarea#message(name="message", class="form-textarea", placeholder="Your Message", required)  
+
+    button.submit-button(type="submit") Send Message
+    footer#footer 
+      | Copyright © 2024 RayDanceAcademy.com | All Rights Reserved
+
